@@ -1,0 +1,34 @@
+:root{color-scheme:light;--ink:#382b2b;--muted:#81716c;--peach:#e77965;--cream:#fff8f3;--line:#f0e7e1}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:34px 20px;background:var(--cream);color:var(--ink);font-family:ui-rounded,"Avenir Next",Avenir,system-ui,sans-serif;line-height:1.6}
+.page{width:min(100%,660px);margin:0 auto;text-align:center;padding:36px 24px 24px}
+.bot-icon{display:block;width:156px;height:156px;object-fit:cover;border-radius:50%;margin:0 auto 26px;border:7px solid #fff;box-shadow:0 8px 28px #7e49301c}
+.eyebrow{margin:0 0 8px;color:var(--peach);font-size:11px;font-weight:800;letter-spacing:.16em}
+h1{margin:0;font-size:clamp(36px,8vw,54px);line-height:1.1;letter-spacing:-.045em}
+.intro{max-width:440px;margin:15px auto 34px;color:var(--muted);font-size:17px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:left}
+.features article{padding:20px 17px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.features article>span{display:grid;place-items:center;width:34px;height:34px;margin-bottom:13px;border-radius:10px;background:#fff0e9;color:var(--peach);font-size:20px}
+h2{margin:0 0 6px;font-size:15px;letter-spacing:-.02em}
+.features article p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+.privacy-note{max-width:510px;margin:26px auto 7px;color:var(--muted);font-size:13px}
+.privacy-link{color:var(--peach);font-size:13px;font-weight:700;text-decoration:none}.privacy-link:hover{text-decoration:underline}
+footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);color:#a49691;font-size:12px}
+.policy-header{width:min(100%,760px);margin:0 auto 38px;padding:0 10px 17px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{display:inline-flex;align-items:center;gap:9px;color:var(--ink);font-size:16px;font-weight:750;text-decoration:none}
+.brand-image{display:block;width:28px;height:28px;object-fit:cover;border-radius:50%}
+.policy{width:min(100%,720px);margin:0 auto;padding:0 10px 30px;text-align:left}
+.policy>.eyebrow{margin-bottom:7px}
+.policy h1{font-size:clamp(36px,7vw,48px)}
+.policy-date{margin:10px 0 32px;color:var(--muted);font-size:13px}
+.policy section{margin:0 0 27px;padding:0 0 24px;border-bottom:1px solid var(--line)}
+.policy h2{margin:0 0 10px;font-size:21px;letter-spacing:-.025em}
+.policy h3{margin:18px 0 7px;font-size:15px}
+.policy p,.policy li{color:#655955;font-size:14px;line-height:1.8}
+.policy p{margin:0 0 12px}
+.policy ul,.policy ol{padding-left:22px;margin:8px 0 14px}
+.policy a{color:var(--peach);font-weight:650;text-decoration:underline;text-decoration-color:#e7796560;text-underline-offset:3px}
+.policy code{padding:2px 5px;border-radius:5px;background:#fff0e9;color:#8e4a3e;font-size:.9em}
+.policy-back{display:inline-block;margin-top:4px;text-decoration:none!important}
+.policy-footer{width:min(100%,760px);margin:0 auto;padding:17px 10px 0;border-top:1px solid var(--line);color:#a49691;font-size:12px;text-align:center}
+@media(max-width:580px){body{padding:20px 14px}.page{padding:26px 8px 18px}.bot-icon{width:132px;height:132px;margin-bottom:22px}.features{grid-template-columns:1fr;text-align:left}.features article{display:grid;grid-template-columns:36px 1fr;column-gap:12px;align-items:center;padding:15px}.features article>span{grid-row:span 2;margin:0}.features article p{grid-column:2}.intro{font-size:16px;margin-bottom:26px}footer{margin-top:38px}}

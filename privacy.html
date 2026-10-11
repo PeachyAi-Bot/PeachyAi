@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff8f3">
+    <meta name="description" content="Learn what PeachyAI stores, how it is used, and how you can manage or delete your data.">
+    <title>Privacy Policy — PeachyAI</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="policy-header">
+      <a class="brand" href="index.html"><img class="brand-image" src="megaton-regular.png" alt=""> PeachyAI</a>
+      <a class="privacy-link" href="index.html">← Back to home</a>
+    </header>
+    <main class="policy">
+      <p class="eyebrow">YOUR PRIVACY MATTERS</p>
+      <h1>Privacy Policy</h1>
+      <p class="policy-date">Last updated: 11 October 2026</p>
+
+      <section><h2>What information PeachyAI collects</h2>
+        <p>Each server can have one selected chat channel. When a server administrator selects a channel with <code>/memoryenable</code>, PeachyAI may store qualifying messages from that channel, along with the message time, server and channel IDs, the author's user ID, and display name. Selecting another channel moves PeachyAI's chat features to that channel.</p>
+        <p>When you mention PeachyAI, it may store your prompt and the bot's reply, together with your user ID, the server and channel IDs, and the time. It may also store saved memories: their text, category, associated user and server IDs, display name, and creation or update times. Memories can be added at a user's request or created from eligible channel messages when automatic memory creation is enabled.</p>
+        <p>PeachyAI also stores the selected chat channel for each server. If you opt out, it stores your Discord user ID and opt-out time. The bot does not save direct-message content.</p>
+      </section>
+
+      <section><h2>How PeachyAI uses information</h2>
+        <p>Channel messages help generate automatic channel replies and <code>/gen</code> text. Mention prompts, conversation history, and saved memories help PeachyAI respond to you.</p>
+        <p>In the selected chat channel, PeachyAI sends eligible messages to Mancer to extract useful details, such as interests or preferences. PeachyAI may save those details as memories and use them to personalize later replies. Mancer's handling of messages sent to its API is described in <a href="https://mancer.tech/privacy">Mancer's Privacy Policy</a>.</p>
+        <h3>How saved memories work</h3>
+        <ol><li>A server administrator selects one chat channel with <code>/memoryenable</code>.</li><li>PeachyAI sends eligible messages from that channel to Mancer, which extracts useful details.</li><li>PeachyAI may save those details as memories associated with the relevant user and server.</li><li>PeachyAI can use saved memories as context for later replies. Memories are automatically deleted after seven days.</li></ol>
+        <p>This process saves information for PeachyAI to use in replies; PeachyAI's code does not use those messages to train or fine-tune the AI model.</p>
+      </section>
+
+      <section><h2>Services that process information</h2>
+        <ul><li><strong>Mancer AI:</strong> PeachyAI sends relevant prompts, message context, and saved memories to Mancer through its API to generate replies. Eligible channel messages may also be sent to extract details for saved memories. See <a href="https://mancer.tech/privacy">Mancer's Privacy Policy</a>.</li><li><strong>PebbleHost:</strong> PeachyAI is hosted on PebbleHost. See <a href="https://pebblehost.com/src/PebbleHost_Privacy_Policy.pdf">PebbleHost's Privacy Policy</a>.</li></ul>
+        <p>Mention replies, automatic channel replies, and successful <code>/gen</code> results are posted in their server channels and can be seen by members who can view those channels. Other slash command responses are private.</p>
+      </section>
+
+      <section><h2>How long information is kept</h2>
+        <p>PeachyAI automatically deletes saved messages, memories, and mention history after seven days. The selected chat channel remains set until changed with <code>/memoryenable</code> or disabled with <code>/memorydisable</code>. This schedule applies to data held by PeachyAI; Discord and Mancer handle information they receive under their own privacy policies.</p>
+        <p>When PeachyAI leaves or is removed from a server, it deletes its stored messages, memories, mention history, and channel settings associated with that server. This does not delete the same users' data associated with other servers or their opt-out records, or automatically remove information already processed by Discord or Mancer.</p>
+        <p><strong>Request deletion:</strong> Email <a href="mailto:peachyai-privacy@proton.me">peachyai-privacy@proton.me</a> with your Discord user ID or server ID and describe what you want removed.</p>
+        <h3>Why the opt-out record is kept</h3>
+        <p>PeachyAI keeps your user ID and opt-out time so it can recognize and honor your opt-out across servers after deleting your other saved records. This marker is not message or conversation history. <code>/optin</code> removes it.</p>
+      </section>
+      <a class="privacy-link policy-back" href="index.html">← Back to PeachyAI</a>
+    </main>
+    <footer class="policy-footer">PeachyAI · Made with care</footer>
+  </body>
+</html>
