@@ -17,7 +17,7 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);color:#
 .policy-header{width:min(100%,760px);margin:0 auto 38px;padding:0 10px 17px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
 .brand{display:inline-flex;align-items:center;gap:9px;color:var(--ink);font-size:16px;font-weight:750;text-decoration:none}
 .brand-image{display:block;width:28px;height:28px;object-fit:cover;border-radius:50%}
-.policy{width:min(100%,720px);margin:0 auto;padding:0 10px 30px;text-align:left}
+.policy{width:min(100%,720px);margin:0 auto;padding:0 10px 30px;text-align:center}
 .policy>.eyebrow{margin-bottom:7px}
 .policy h1{font-size:clamp(36px,7vw,48px)}
 .policy-date{margin:10px 0 32px;color:var(--muted);font-size:13px}
@@ -26,7 +26,7 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);color:#
 .policy h3{margin:18px 0 7px;font-size:15px}
 .policy p,.policy li{color:#655955;font-size:14px;line-height:1.8}
 .policy p{margin:0 0 12px}
-.policy ul,.policy ol{padding-left:22px;margin:8px 0 14px}
+.policy ul,.policy ol{padding:0;margin:8px 0 14px;list-style-position:inside}
 .policy a{color:var(--peach);font-weight:650;text-decoration:underline;text-decoration-color:#e7796560;text-underline-offset:3px}
 .policy code{padding:2px 5px;border-radius:5px;background:#fff0e9;color:#8e4a3e;font-size:.9em}
 .policy-back{display:inline-block;margin-top:4px;text-decoration:none!important}
