@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f4">
+  <title>PeachyAI Server Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="PeachyAI dashboard home">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      <span>PeachyAI <small>SERVER DASHBOARD</small></span>
+    </a>
+    <div class="account-area">
+      <span id="account-name" class="account-name"></span>
+      <button id="logout-button" class="button button-quiet hidden" type="button">Sign out</button>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section id="welcome-panel" class="welcome-panel">
+      <div class="eyebrow">SERVER SETTINGS</div>
+      <h1>Make PeachyAI feel right at home.</h1>
+      <p>Choose a server and adjust how PeachyAI replies. Changes are saved to that server’s bot settings.</p>
+      <a id="login-button" class="button button-primary" href="#">Continue with Discord</a>
+      <div id="welcome-notice" class="notice hidden" role="status" aria-live="polite"></div>
+      <p class="fine-print">Sign in with Discord. PeachyAI only shows servers where you can manage its settings.</p>
+    </section>
+
+    <section id="dashboard-panel" class="hidden">
+      <div class="page-heading">
+        <div>
+          <div class="eyebrow">SERVER CONFIGURATION</div>
+          <h1>Settings</h1>
+          <p>Changes apply to this server as soon as you save.</p>
+        </div>
+        <label class="server-picker">
+          <span>Server</span>
+          <select id="guild-select" aria-label="Choose a Discord server"></select>
+        </label>
+      </div>
+
+      <div id="notice" class="notice hidden" role="status" aria-live="polite"></div>
+      <form id="settings-form">
+        <section class="settings-card">
+          <div class="card-heading"><div><h2>Reply activity</h2><p>Control when PeachyAI joins the conversation.</p></div></div>
+          <label class="switch-row">
+            <span><strong>Automatic replies</strong><small>Allow replies in the channel enabled with <code>/enable</code>.</small></span>
+            <input id="automatic-replies" type="checkbox"><span class="switch" aria-hidden="true"></span>
+          </label>
+          <div class="field-grid">
+            <label class="field"><span>Check interval</span><select id="response-interval"><option value="default">Random, 3–5 minutes</option><option value="frequent">Random, 1–3 minutes</option><option value="relaxed">Random, 5–10 minutes</option><option value="fixed_5">Every 5 minutes</option></select></label>
+            <label class="field"><span>New messages before considering a reply</span><select id="message-threshold"><option value="5">5 messages</option><option value="10">10 messages</option><option value="15">15 messages</option></select></label>
+            <label class="field"><span>Reply chance after threshold</span><select id="reply-chance"><option value="0.2">20%</option><option value="0.35">35%</option><option value="0.5">50%</option></select></label>
+            <label class="field"><span>Usual reply length</span><select id="response-length"><option value="short">Short</option><option value="medium">Balanced</option><option value="detailed">Detailed</option></select></label>
+          </div>
+        </section>
+
+        <section class="settings-card">
+          <div class="card-heading"><div><h2>Saved memories</h2><p>Automatic memory creation can be switched off independently from replies.</p></div></div>
+          <label class="switch-row">
+            <span><strong>Automatic memory creation</strong><small>When off, direct “remember this” requests can still be used.</small></span>
+            <input id="automatic-memory" type="checkbox"><span class="switch" aria-hidden="true"></span>
+          </label>
+          <label class="field narrow"><span>Eligible messages before checking for memories</span><select id="memory-batch-size"><option value="10">10 messages</option><option value="20">20 messages</option><option value="30">30 messages</option></select></label>
+        </section>
+
+        <section class="settings-card">
+          <div class="card-heading"><div><h2>Personality</h2><p>Set the general style and choose which behaviors are enabled.</p></div></div>
+          <div class="field-grid">
+            <label class="field"><span>Style</span><select id="style"><option value="casual">Casual</option><option value="playful">Playful</option><option value="calm">Calm</option></select></label>
+            <label class="field"><span>Usual reply tone</span><select id="tone"><option value="natural">Natural</option><option value="lighthearted">Lighthearted</option><option value="relaxed">Relaxed</option></select></label>
+          </div>
+          <div class="toggle-grid">
+            <label class="toggle-option"><input data-personality="humor" type="checkbox"><span>Humor</span></label>
+            <label class="toggle-option"><input data-personality="dark_humor" type="checkbox"><span>Dark humor</span></label>
+            <label class="toggle-option"><input data-personality="sarcasm" type="checkbox"><span>Sarcasm</span></label>
+            <label class="toggle-option"><input data-personality="profanity" type="checkbox"><span>Profanity</span></label>
+            <label class="toggle-option"><input data-personality="controversial_topics" type="checkbox"><span>Controversial topics</span></label>
+            <label class="toggle-option"><input data-personality="sensitive_topics" type="checkbox"><span>Sensitive topics</span></label>
+            <label class="toggle-option"><input data-personality="political_discussion" type="checkbox"><span>Political discussion</span></label>
+            <label class="toggle-option"><input data-personality="religious_discussion" type="checkbox"><span>Religious discussion</span></label>
+            <label class="toggle-option"><input data-personality="sexual_discussion" type="checkbox"><span>Sexual topics</span></label>
+            <label class="toggle-option"><input data-personality="mature_discussion" type="checkbox"><span>Mature topics</span></label>
+            <label class="toggle-option"><input data-personality="avoid_unnecessary_refusals" type="checkbox"><span>Avoid unnecessary refusals</span></label>
+            <label class="toggle-option"><input data-personality="avoid_moralizing" type="checkbox"><span>Avoid moralizing</span></label>
+            <label class="toggle-option"><input data-personality="stay_relevant" type="checkbox"><span>Stay relevant</span></label>
+            <label class="toggle-option"><input data-personality="keep_responses_natural" type="checkbox"><span>Keep replies natural</span></label>
+          </div>
+          <p class="fine-print">These options guide response style and do not override Discord or AI provider safety rules.</p>
+        </section>
+
+        <div class="form-actions">
+          <button id="reset-button" class="button button-quiet" type="button">Reset all server overrides</button>
+          <button id="save-button" class="button button-primary" type="submit">Save settings</button>
+        </div>
+      </form>
+    </section>
+    <div id="loading" class="loading hidden" role="status">Loading dashboard…</div>
+  </main>
+
+  <footer><span>PeachyAI server dashboard</span><span>Server changes are saved by the bot.</span></footer>
+</body>
+</html>
