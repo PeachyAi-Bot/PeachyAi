@@ -32,3 +32,5 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);color:#
 .policy-back{display:inline-block;margin-top:4px;text-decoration:none!important}
 .policy-footer{width:min(100%,760px);margin:0 auto;padding:17px 10px 0;border-top:1px solid var(--line);color:#a49691;font-size:12px;text-align:center}
 @media(max-width:580px){body{padding:20px 14px}.page{padding:26px 8px 18px}.bot-icon{width:132px;height:132px;margin-bottom:22px}.features{grid-template-columns:1fr}.features article{padding:18px 16px}.intro{font-size:16px;margin-bottom:26px}footer{margin-top:38px}}
+
+.dashboard-link{display:block;margin-top:8px}
