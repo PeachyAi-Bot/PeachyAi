@@ -53,8 +53,8 @@
             <input id="automatic-replies" type="checkbox"><span class="switch" aria-hidden="true"></span>
           </label>
           <div class="field-grid">
-            <label class="field"><span>Check interval (minutes)</span><input id="response-interval" type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="1440" step="1" required></label>
-            <label class="field"><span>New messages before considering a reply</span><input id="message-threshold" type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="1000" step="1" required></label>
+            <label class="field"><span>Check interval (minutes)</span><input id="response-interval" type="number" inputmode="numeric" pattern="[0-9]*" min="5" max="1440" step="1" required></label>
+            <label class="field"><span>New messages before considering a reply</span><input id="message-threshold" type="number" inputmode="numeric" pattern="[0-9]*" min="10" max="1000" step="1" required></label>
             <label class="field"><span>Reply chance after threshold (%)</span><input id="reply-chance" type="number" inputmode="numeric" pattern="[0-9]*" min="0" max="100" step="1" required></label>
             <label class="field"><span>Usual reply length</span><select id="response-length"><option value="short">Short (~125 characters)</option><option value="medium">Medium (~200 characters)</option><option value="long">Long (~300 characters)</option></select></label>
           </div>
@@ -66,7 +66,7 @@
             <span><strong>Automatic memory creation</strong><small>When off, direct “remember this” requests can still be used.</small></span>
             <input id="automatic-memory" type="checkbox"><span class="switch" aria-hidden="true"></span>
           </label>
-          <label class="field narrow"><span>Eligible messages before checking for memories</span><input id="memory-batch-size" type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="1000" step="1" required></label>
+          <label class="field narrow"><span>Eligible messages before checking for memories</span><input id="memory-batch-size" type="number" inputmode="numeric" pattern="[0-9]*" min="10" max="1000" step="1" required></label>
         </section>
 
         <section class="settings-card">
