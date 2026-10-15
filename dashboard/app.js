@@ -75,10 +75,10 @@
 
   function numericInputsValid() {
     const fields = [
-      ["response-interval", 1, 1440],
-      ["message-threshold", 1, 1000],
+      ["response-interval", 5, 1440],
+      ["message-threshold", 10, 1000],
       ["reply-chance", 0, 100],
-      ["memory-batch-size", 1, 1000],
+      ["memory-batch-size", 10, 1000],
     ];
     for (const [id, minimum, maximum] of fields) {
       const field = el(id);
