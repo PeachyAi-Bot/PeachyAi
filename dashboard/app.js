@@ -46,7 +46,6 @@
       el("reply-chance").value = String(settings.reply_chance);
       el("response-length").value = settings.response_length;
       el("style").value = settings.style;
-      el("tone").value = settings.tone;
       document.querySelectorAll("[data-personality]").forEach((input) => {
         input.checked = Boolean(settings.personality[input.dataset.personality]);
       });
