@@ -53,9 +53,9 @@
             <input id="automatic-replies" type="checkbox"><span class="switch" aria-hidden="true"></span>
           </label>
           <div class="field-grid">
-            <label class="field"><span>Check interval</span><select id="response-interval"><option value="default">Random, 3–5 minutes</option><option value="frequent">Random, 1–3 minutes</option><option value="relaxed">Random, 5–10 minutes</option><option value="fixed_5">Every 5 minutes</option></select></label>
-            <label class="field"><span>New messages before considering a reply</span><select id="message-threshold"><option value="5">5 messages</option><option value="10">10 messages</option><option value="15">15 messages</option></select></label>
-            <label class="field"><span>Reply chance after threshold</span><select id="reply-chance"><option value="0.2">20%</option><option value="0.35">35%</option><option value="0.5">50%</option></select></label>
+            <label class="field"><span>Check interval (minutes)</span><input id="response-interval" type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="1440" step="1" required></label>
+            <label class="field"><span>New messages before considering a reply</span><input id="message-threshold" type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="1000" step="1" required></label>
+            <label class="field"><span>Reply chance after threshold (%)</span><input id="reply-chance" type="number" inputmode="numeric" pattern="[0-9]*" min="0" max="100" step="1" required></label>
             <label class="field"><span>Usual reply length</span><select id="response-length"><option value="short">Short</option><option value="medium">Balanced</option><option value="detailed">Detailed</option></select></label>
           </div>
         </section>
@@ -66,7 +66,7 @@
             <span><strong>Automatic memory creation</strong><small>When off, direct “remember this” requests can still be used.</small></span>
             <input id="automatic-memory" type="checkbox"><span class="switch" aria-hidden="true"></span>
           </label>
-          <label class="field narrow"><span>Eligible messages before checking for memories</span><select id="memory-batch-size"><option value="10">10 messages</option><option value="20">20 messages</option><option value="30">30 messages</option></select></label>
+          <label class="field narrow"><span>Eligible messages before checking for memories</span><input id="memory-batch-size" type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="1000" step="1" required></label>
         </section>
 
         <section class="settings-card">

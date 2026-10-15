@@ -65,13 +65,33 @@
       automatic_replies: el("automatic-replies").checked,
       automatic_memory_creation: el("automatic-memory").checked,
       memory_batch_size: Number(el("memory-batch-size").value),
-      response_interval: el("response-interval").value,
+      response_interval: Number(el("response-interval").value),
       message_threshold: Number(el("message-threshold").value),
       reply_chance: Number(el("reply-chance").value),
       style: el("style").value,
       response_length: el("response-length").value,
       personality,
     };
+  }
+
+  function numericInputsValid() {
+    const fields = [
+      ["response-interval", 1, 1440],
+      ["message-threshold", 1, 1000],
+      ["reply-chance", 0, 100],
+      ["memory-batch-size", 1, 1000],
+    ];
+    for (const [id, minimum, maximum] of fields) {
+      const field = el(id);
+      const raw = field.value;
+      if (!/^[0-9]+$/.test(raw) || Number(raw) < minimum || Number(raw) > maximum) {
+        field.setCustomValidity(`Enter a whole number from ${minimum} to ${maximum}.`);
+        field.reportValidity();
+        field.setCustomValidity("");
+        return false;
+      }
+    }
+    return true;
   }
 
   async function start() {
@@ -144,6 +164,7 @@
   el("guild-select").addEventListener("change", loadGuildSettings);
   el("settings-form").addEventListener("submit", async (event) => {
     event.preventDefault();
+    if (!numericInputsValid()) return;
     const button = el("save-button");
     button.disabled = true;
     try {
